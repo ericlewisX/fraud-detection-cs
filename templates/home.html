@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+<html>
+  <style>
+      .important-paragraph{
+        color:black
+      }
+  </style>
+  
+    <center>
+        <u><h1 class='important-paragraph'>Predicting Fraud</h1></u>
+      
+        <p>
+            Is your event fraud or not??
+        </p>
+    </center>
+    
+    <img src='/static/images/frauddetection.png' alt='Fraud Detection'>
+    
+    
+        <h3>
+            Team Members:
+        </h3>
+        <ol>
+            <li>Jeff Baksa</li>
+            <li>Eric Lewis</li>
+            <li>Marc Mares</li>
+            <li>Vamsidhar Vurimindi</li>
+        </ol>
+        
+        <h3> 
+            Table of Events:
+        </h3>
+    
+        {% for table in tables %}
+            {{ table|safe }}
+        {% endfor %}
+</html>
+{% endblock content %}
